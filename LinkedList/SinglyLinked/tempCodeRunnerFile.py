@@ -1,6 +1,2 @@
-Sll.insert(2, -1)
-# Sll.insert(3, -1)
-# Sll.insert(4, -1)
-# Sll.insert(0, 0)
-# Sll.insert(0, 3)
-# Sll.insert(11, 1)
+Sll.insert(3,-1)
+Sll.insert(4,-1)

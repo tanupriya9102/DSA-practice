@@ -46,13 +46,26 @@ class SLinkedList:
                 if tempNode == self.tail:
                     self.tail = newNode
 
+    # traversal of singly linked list 
+    def traverse(self):
+        if self.head is None:
+            print("Linked list doesn't exist")
+        else:
+            node=self.head
+            while node is not None:
+                print(node.value)
+                node=node.next
+
+
+
 
 Sll = SLinkedList()
-Sll.insert(1, 1)
+Sll.insert(1, 3)
 Sll.insert(2,-1)
 Sll.insert(3,-1)
 Sll.insert(4,-1)
 Sll.insert(5,3)
-Sll.insert(6,2)
+Sll.insert(6,2) #order of list will change=>position of 5 will not be 3 but will become 4
 Sll.insert(7,1)
 print([node.value for node in Sll])
+Sll.traverse()
