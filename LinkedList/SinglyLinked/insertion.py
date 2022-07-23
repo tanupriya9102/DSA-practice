@@ -16,7 +16,7 @@ class SLinkedList:
             yield node
             node = node.next
 
-    # insert in liked list
+    # insert nodes in linked list after a give index
     def insert(self, value, location):
         newNode = Node(value)
     # if List doesnt have an element yet
@@ -49,11 +49,10 @@ class SLinkedList:
 
 Sll = SLinkedList()
 Sll.insert(1, 1)
-Sll.insert(2, -1)
-Sll.insert(3, -1)
-Sll.insert(4, -1)
-Sll.insert(0, 0)
-Sll.insert(0, 3)
-Sll.insert(11, 1)
-
+Sll.insert(2,-1)
+Sll.insert(3,-1)
+Sll.insert(4,-1)
+Sll.insert(5,3)
+Sll.insert(6,2)
+Sll.insert(7,1)
 print([node.value for node in Sll])
