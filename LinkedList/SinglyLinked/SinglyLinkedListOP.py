@@ -103,6 +103,14 @@ class SLinkedList:
                     index+=1
                 nextNode=tempNode.next
                 tempNode.next=nextNode.next
+    # delete all nodes from list 
+    def delList(self):
+        if self.head is None:
+            return (print("Linked list doesn't exist"))
+        else:
+            self.head=None
+            self.tail=None
+            return("linked list deleted")
 
 
 
@@ -137,5 +145,7 @@ print([node.value for node in Sll])
 Sll1 = SLinkedList()
 Sll1.insert(1,0)
 print([node.value for node in Sll1])
-Sll1.delete(0)
-print([node.value for node in Sll1])
+# Sll1.delete(0)
+# print([node.value for node in Sll1])
+Sll1.delList()
+print(Sll1)

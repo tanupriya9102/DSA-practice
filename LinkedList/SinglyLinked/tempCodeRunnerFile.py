@@ -1,2 +1,2 @@
-Sll.insert(3,-1)
-Sll.insert(4,-1)
+Sll1.delete(0)
+# print([node.value for node in Sll1])
