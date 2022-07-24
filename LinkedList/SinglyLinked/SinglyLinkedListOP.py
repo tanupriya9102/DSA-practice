@@ -61,15 +61,54 @@ class SLinkedList:
          if self.head is None:
             return (print("Linked list doesn't exist"))
          else:
-            node=self.head
-            index=0
+            node = self.head
+            index = 0
             while node is not None:
                 if node.value == svalue:
-                   return(print("Index at which element is present=",index))  #gives 1st index where element found to consider all index change return to print               
-                node=node.next
-                index+=1
+                   # gives 1st index where element found to consider all index change return to print
+                   return(print("Index at which element is present=", index))
+                node = node.next
+                index += 1
 
-            return(print("value doesn't exist in list!!")) 
+            return(print("value doesn't exist in list!!"))
+    # deleting elements from linked list 
+    def delete(self, location):
+        if self.head is None:
+            return (print("Linked list doesn't exist"))
+        else:
+            if location==0:
+                if self.head==self.tail:
+                    self.head=None
+                    self.tail=None
+                else:
+                    self.head=self.head.next #node's adderess stored in head's next
+
+            elif location==-1:
+                if self.head==self.tail:
+                    self.head=None
+                    self.tail=None
+                else:
+                    node=self.head
+                    while node is not None:
+                        if node.next==self.tail:
+                            break
+                        node=node.next
+                    node.next=None
+                    self.tail=node
+            else:
+                tempNode=self.head
+                index=0
+                while index<location-1:
+                    tempNode=tempNode.next
+                    index+=1
+                nextNode=tempNode.next
+                tempNode.next=nextNode.next
+
+
+
+
+
+
 
 
 
@@ -90,5 +129,13 @@ Sll.insert(7,1)
 Sll.insert(7,-1)
 print([node.value for node in Sll])
 # Sll.traverse()
-Sll.searching(7)
+# Sll.searching(7)
 # Sll.searching(8)
+Sll.delete(-1)
+print([node.value for node in Sll])
+
+Sll1 = SLinkedList()
+Sll1.insert(1,0)
+print([node.value for node in Sll1])
+Sll1.delete(0)
+print([node.value for node in Sll1])
