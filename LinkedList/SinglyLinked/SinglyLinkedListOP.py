@@ -19,7 +19,7 @@ class SLinkedList:
     # insert nodes in linked list after a give index
     def insert(self, value, location):
         newNode = Node(value)
-    # if List doesnt have an element yet
+        # if List doesnt have an element yet
         if self.head is None:
             self.head = newNode
             self.tail = newNode
@@ -33,7 +33,7 @@ class SLinkedList:
                 newNode.next = None
                 self.tail.next = newNode
                 self.tail = newNode
-            # element to be added at particular index 
+            # element to be added at particular index
             else:
                 tempNode = self.head
                 index = 0
@@ -46,15 +46,35 @@ class SLinkedList:
                 if tempNode == self.tail:
                     self.tail = newNode
 
-    # traversal of singly linked list 
+    # traversal of singly linked list
     def traverse(self):
         if self.head is None:
             print("Linked list doesn't exist")
         else:
-            node=self.head
+            node = self.head
             while node is not None:
                 print(node.value)
+                node = node.next
+
+    # searching linked list
+    def searching(self, svalue):
+         if self.head is None:
+            return (print("Linked list doesn't exist"))
+         else:
+            node=self.head
+            index=0
+            while node is not None:
+                if node.value == svalue:
+                   return(print("Index at which element is present=",index))  #gives 1st index where element found to consider all index change return to print               
                 node=node.next
+                index+=1
+
+            return(print("value doesn't exist in list!!")) 
+
+
+
+
+        
 
 
 
@@ -67,5 +87,8 @@ Sll.insert(4,-1)
 Sll.insert(5,3)
 Sll.insert(6,2) #order of list will change=>position of 5 will not be 3 but will become 4
 Sll.insert(7,1)
+Sll.insert(7,-1)
 print([node.value for node in Sll])
-Sll.traverse()
+# Sll.traverse()
+Sll.searching(7)
+# Sll.searching(8)
