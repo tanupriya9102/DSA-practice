@@ -1,0 +1,6 @@
+push()
+pop()
+peek()
+isEmpty()
+isFull()
+delete()
