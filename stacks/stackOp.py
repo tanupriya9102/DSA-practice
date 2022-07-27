@@ -1,12 +1,9 @@
 
-from sqlalchemy import true
-
-
 class Stack:
     def __init__(self):
         self.list=[]
 
-    def __str__(self):
+    def __str__(self): #shows how stack looks else would return address
         values=reversed(self.list)
         values=[str(x) for x in values]
         return '\n'.join(values)
@@ -15,17 +12,30 @@ class Stack:
         self.list.append(n)
         return "Sucessfully inserted!"
 
-    # def pop(self):
-    #     return(self.stk.pop())
+    def pop(self):
+        if(self.isEmpty()):
+            return "list is empty"
+        else:
+            return self.list.pop()
+  
+        
 
-    # def peek(self):
-    #     return(self.stk[-1])
+    def peek(self): #returns top most element in stack (last element(LIFO))
+        if(self.isEmpty()):
+            return "list is empty"
+        else:
+            return self.list[-1]
+        
 
     def isEmpty(self):
         if self.list==[]:
             return True
         else:
             return False
+
+    def delete(self):
+        self.list=None
+        return self.list
 
     # def isfull(self)
 
@@ -39,4 +49,7 @@ s.push(2)
 s.push(3)
 s.push(4)
 print(s)
-print(s.isEmpty())
+# print(s)
+# print(s.isEmpty())
+# print(s.peek())
+# print(s.delete())
