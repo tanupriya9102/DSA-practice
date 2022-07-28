@@ -1,0 +1,6 @@
+enqueue
+dequeue
+peek
+isEmpty
+isFull
+delete
