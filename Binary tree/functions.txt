@@ -1,0 +1,12 @@
+Creation
+Insertion
+Deletion
+Searching
+Traversal
+->DFS
+  =>Pre order
+  =>In order
+  =>Post order
+->BFS 
+  =>Level order
+Deletion
