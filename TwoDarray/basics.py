@@ -15,3 +15,16 @@ print(nd2)
 # to add row/column at the end
 nd3=np.append(tdarray,[[4,4,4,4]],axis=0)
 print(nd3)
+
+# accessing elements:
+import numpy as np
+
+arr = np.array([[1,2,3,4],[6,7,8,9],[10,11,12,13],[11,11,11,11]])
+def AccessElement(arr,rindex,cindex):
+    if rindex>=len(arr) and cindex>=len(arr[0]):
+        print("Out of limit!")
+    else:
+        print(arr[rindex][cindex])
+
+print(arr)
+AccessElement(arr,2,3)
