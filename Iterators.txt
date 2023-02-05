@@ -1,0 +1,4 @@
+__iter__->creates an iterator object to iterable-> can be written as iter(iterable)
+__next__->used to access elements of iter object-> can be written as next(iter_obj)
+
+Internally used in for loop using while loop
