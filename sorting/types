@@ -1,0 +1,15 @@
+Types of Sorting:
+
+1.Space Used:
+1.1 in place=>bubble
+1.2 out of place=>merge
+
+
+2.Stability
+2.1 stable(order remains same after sorting(repitition of values))=>insertion sort
+2.2 unstable=>Quick Sort
+
+
+
+Non increasing(repitition of values)
+decreasing for unique values
