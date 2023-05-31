@@ -1,4 +1,4 @@
-#searching node in a Binary tree using Level Order Traversal
+#Inserting node in a Binary tree using Level Order Traversal
 class Node:
     def __init__(self, val):
         self.val=val
