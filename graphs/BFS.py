@@ -22,10 +22,12 @@ class Graph:
         visited=set()
         visited.add(vertex)
         # queue=[vertex]
-        queue=deque([vertex])
+        queue=deque([vertex]) #to reduce time complexity
 
         while queue:
-            current_vertex=queue.popleft()
+            # current_vertex=queue.pop(0) =>O(n)
+            current_vertex=queue.popleft() #O(1)
+
             print(current_vertex)
             for adjacent_vertex in self.gdict[current_vertex]:
                 if adjacent_vertex not in visited:
