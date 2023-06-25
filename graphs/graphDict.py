@@ -29,6 +29,7 @@ d={'a':['b','c'],
    'c':['a','e'],
    'd':['b','e','f'],
    'e':['b','d','f'],
+   'f':['']
    }
 
 graph=Graph(d)
@@ -39,7 +40,7 @@ graph.addEdge('f','d')
 # print(graph.gdict)
 graph.addEdge('f','e')
 print(graph.gdict)
-print('---------------------------------------------')
+print('---------------------------------------------------------------------------------------------')
 # graph.delEdge('f','e')
 # print(graph.gdict)
 graph.delVertex('f')
