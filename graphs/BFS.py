@@ -4,17 +4,6 @@ class Graph:
         if gdict is None:
             gdict={}
         self.gdict=gdict
-    def addEdge(self,vertex,edge):
-        self.gdict[vertex].append(edge)
-    def addVertex(self,vertex):
-        self.gdict[vertex]=[]
-    def delEdge(self,vertex,edge):
-        self.gdict[vertex].remove(edge)
-    def delVertex(self,vertex):
-        del self.gdict[vertex]
-        for i in self.gdict:
-            if vertex in self.gdict[i]:
-                self.gdict[i].remove(vertex)
     
     def bfs(self,vertex=None):
         if not vertex:
