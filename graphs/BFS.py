@@ -1,3 +1,4 @@
+from collections import deque
 class Graph:
     def __init__(self,gdict=None):
         if gdict is None:
@@ -20,9 +21,11 @@ class Graph:
             vertex=list(self.gdict.keys())[0]
         visited=set()
         visited.add(vertex)
-        queue=[vertex]
+        # queue=[vertex]
+        queue=deque([vertex])
+
         while queue:
-            current_vertex=queue.pop(0)
+            current_vertex=queue.popleft()
             print(current_vertex)
             for adjacent_vertex in self.gdict[current_vertex]:
                 if adjacent_vertex not in visited:
