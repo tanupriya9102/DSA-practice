@@ -1,4 +1,4 @@
-#DSA Repository - Basic Codes (Python)
+**DSA Repository - Basic Codes (Python)**
 This repository contains a collection of basic data structures and algorithms implemented in Python. It serves as a foundational resource for learning and practicing fundamental concepts in DSA using the Python programming language.
 
 Each directory within the repository consists of Python code files implementing the specific data structures or algorithms. 
